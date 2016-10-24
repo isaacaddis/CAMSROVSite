@@ -147,8 +147,8 @@
 					</header>
 					<footer>
 						<ul class="buttons">
-							<li><a class = "scrolly" href="#" class="button">Learn More</a></li>
-							<li><a class = "scrolly" href="#content" class="button">Contact</a></li>
+							<li><a href="#" class="button">Learn More</a></li>
+							<li><a href="#content" class="button">Contact</a></li>
 						</ul>
 					</footer>
 
@@ -190,7 +190,7 @@
 							    $from = $_POST['email']; 
 							    $name = $_POST['name'];
 							    $subject = $_POST['subject'];
-							    $message = $name . " (". $from . ") " "asks" . $_POST['message'];
+							    $message = $name . ": " . $_POST['message'];
 							    $headers = $subject;
 							    mail($to,$subject,$message,$headers);
 							    }

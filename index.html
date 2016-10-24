@@ -157,7 +157,7 @@
 					<!-- Content -->
 						<div class="content" id = "content">
 							<h2>Contact Us</h2>
-							<form action = "" method = "POST"> 
+							<form action = "email.php" method = "POST"> 
 								<div class="row 50%">
 									<div class="6u 12u(mobile)">
 										<input type="text" name="name" placeholder="Name" />
@@ -184,17 +184,7 @@
 									</div>
 								</div>
 							</form>
-							<?php 
-							if(isset($_POST['submit'])){
-							    $to = "contact@camsrov.tk";
-							    $from = $_POST['email']; 
-							    $name = $_POST['name'];
-							    $subject = $_POST['subject'];
-							    $message = $name . ": " . $_POST['message'];
-							    $headers = $subject;
-							    mail($to,$subject,$message,$headers);
-							    }
-							?>
+
 						</div>
 
 				</section>

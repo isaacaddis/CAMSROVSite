@@ -28,5 +28,9 @@
 	    if (!$result->success) {
 	        throw new Exception('Gah! CAPTCHA verification failed. Please email me directly at: jstark at jonathanstark dot com', 1);
 	    }
+	    else{
+	    	mail($to, $subject, $message);
+	    	header("location: index.html");
+	    }
 	}
 ?>

@@ -26,7 +26,11 @@
 	    $response = file_get_contents('https://www.google.com/recaptcha/api/siteverify', false, $context);
 	    $result = json_decode($response);
 	    if (!$result->success) {
-	        throw new Exception('Gah! CAPTCHA verification failed. Please email me directly at: jstark at jonathanstark dot com', 1);
+	        // throw new Exception('Gah! CAPTCHA verification failed. Please email me directly at: jstark at jonathanstark dot com', 1);
+	    	echo '<script type="text/javascript">',
+	    	     'alert("Please do not forget to fill out the captcha!");',
+	    	     '</script>'
+	    	;
 	    }
 	    else{
 	    	mail($to, $subject, $message);

@@ -4,7 +4,7 @@
 	    $from = $_POST['email']; 
 	    $name = $_POST['name'];
 	    $subject = $_POST['subject'];
-	    $message = $name . ": " . $_POST['message'];
+	    $message = "Email: ". $from . " Name: ". $name . " Message: " . $_POST['message'];
 	    $headers = $subject;
 
 	    # Verify captcha
